@@ -18,10 +18,11 @@ optional arguments:
   --repeats [integer]   The number of times to shuffle the grid and resample
                         the distribution (number of iterations for the
                         simulation)
-  --sampdist [map name]
-                        The artifact distribution to be sampled (a kernel
+  --sampdist [map name] The artifact distribution to be sampled (a kernel
                         density map)
 
+## GRASS Location CRS
+For best results, you should run this script in an "unprojected" XY GRASS location. It *should* also work in any projected CRS with linear measurements (e.g., UTM projections). Do not use an angular CRS like LatLong.
 
 ## Input artifact density map
 The module requires an existing raster map of artifact densities (or presence/absence). This map must be in the GRASS mapset of the current GRASS session. A random artifact scatter can be created with the GRASS module _r.random_. More complex artifact distributions can be created with a combination of *v.random* > *v.buffer* > *v.to.rast* > *r.random* (or *v.random* > *r.kernel.density*). It is important that the final distribution map not contain any nulls (i.e., any areas without artifacts should contain value 0, not NULL). If necessary, replace nulls with zeros using *r.nulls*.
