@@ -7,6 +7,7 @@
 For basic usage, copy script to current working directory, and from within a GRASS session, run `test_pit_sim.py -h`
 
 optional arguments:
+
   -h, --help            show this help message and exit
   --iters [integer]     The number of steps in the additive sampling routine
                         (per iteration)
