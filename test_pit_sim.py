@@ -11,8 +11,8 @@ parser = argparse.ArgumentParser(description='This model simulates additive samp
 parser.add_argument('--iters', metavar='integer', type=int, nargs='?', const=20, default=20, help='The number of steps in the additive sampling routine (per iteration)')
 parser.add_argument('--bounds', metavar='integer', type=int, nargs='?', const=1000, default=1000, help='The size of the sampling universe (a square)')
 parser.add_argument('--padding', metavar='integer', type=int, nargs='?', const=500, default=500, help='The number of additional units to pad the edges of the sampling universe (to allow for grid rotation, etc)')
-parser.add_argument('--sampres', metavar='integer', type=int, nargs='?', const=10, default=10, help='The size of each sampling point (also a square)')
-parser.add_argument('--sampint', metavar='integer', type=int, nargs='?', const=100, default=100, help='The interval of the initial sampling points')
+parser.add_argument('--sampres', metavar='integer', type=int, nargs='?', const=10, default=10, help='The size of each sampling units (also a square)')
+parser.add_argument('--sampint', metavar='integer', type=int, nargs='?', const=100, default=100, help='The interval of the initial sampling units')
 parser.add_argument('--repeats', metavar='integer', type=int, nargs='?', const=100, default=100, help='The number of times to shuffle the grid and resample the distribution (number of iterations for the simulation)')
 parser.add_argument('--sampdist', metavar='map name', type=str, nargs='?', const="D1_5K", default="D1_5K", help='The artifact distribution to be sampled (a kernel density map)')
 # Read in the entered values to internal variables
@@ -25,15 +25,6 @@ sampint = args['sampint']
 repeats = args['repeats']
 sampdist = args['sampdist']
 prefix = '%s_%s' % (sampdist,sampint)
-# Old non-CLI interface, commented out #
-#iters = 20     # number of steps in the additive sampling routine (per iteration)
-#bounds = 1250 # size of the sampling universe (a square)
-#padding = 500 # number of additional units to pad the edges of the sampling universe (to allow for grid rotation, etc)
-#sampres = 10 # size of each sampling point (also a square)
-#sampint = 150 # interval of the initial sampling points
-#repeats = 500 # the number of times to shuffle the grid and resample the distribution (number of iterations for the simulation)
-#sampdist = "D1_5K" # The artifact distribution to be sampled (a kernel density map)
-#prefix = "d1_5k_%s" % sampint # The prefix for output maps and stats files
 
 def main(iters,bounds,padding,sampres,sampint,repeats,sampdist,prefix):
     '''Main set of code for the sampling simulation'''
