@@ -10,7 +10,7 @@ For basic usage, copy script to current working directory, and from within a GRA
 
 optional arguments:
    
-    -h, --help            show this help message and exit
+    `-h, --help           Show this help message and exit
     --iters [integer]     The number of steps in the additive sampling routine (per iteration)
     --bounds [integer]    The size of the sampling universe (a square)
     --padding [integer]   The number of additional units to pad the edges of thesampling universe (to allow for grid rotation, etc)
@@ -18,7 +18,7 @@ optional arguments:
     --sampint [integer]   The interval of the initial sampling units
     --repeats [integer]   The number of times to shuffle the grid and resample the
  distribution (number of iterations for simulation)
-    --sampdist [map name] The artifact distribution to be sampled (a kernel density map)
+    --sampdist [map name] The artifact distribution to be sampled (a kernel density. map)`
 
 ## GRASS Location CRS
 For best results, you should run this script in an "unprojected" XY GRASS location. It *should* also work in any projected CRS with linear measurements (e.g., UTM projections). Do not use an angular CRS like LatLong.
