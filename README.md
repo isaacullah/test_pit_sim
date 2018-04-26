@@ -10,18 +10,18 @@ For basic usage, copy script to current working directory, and from within a GRA
 
 optional arguments:
    
-   -h, --help            show this help message and exit
-   --iters [integer]     The number of steps in the additive sampling routine
+    -h, --help            show this help message and exit
+    --iters [integer]     The number of steps in the additive sampling routine
                         (per iteration)
-   --bounds [integer]    The size of the sampling universe (a square)
-   --padding [integer]   The number of additional units to pad the edges of the
+    --bounds [integer]    The size of the sampling universe (a square)
+    --padding [integer]   The number of additional units to pad the edges of the
                         sampling universe (to allow for grid rotation, etc)
-   --sampres [integer]  The size of each sampling unit (also a square)
-   --sampint [integer]   The interval of the initial sampling units
-   --repeats [integer]   The number of times to shuffle the grid and resample
+    --sampres [integer]  The size of each sampling unit (also a square)
+    --sampint [integer]   The interval of the initial sampling units
+    --repeats [integer]   The number of times to shuffle the grid and resample
                         the distribution (number of iterations for the
                         simulation)
-   --sampdist [map name] The artifact distribution to be sampled (a kernel
+    --sampdist [map name] The artifact distribution to be sampled (a kernel
                         density map)
 
 ## GRASS Location CRS
